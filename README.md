@@ -17,3 +17,7 @@ or Run by docker compose
 
 test
 
+docker rm -f $(docker ps -aq)
+docker build . -t node-todo-new
+docker run -d --name node-todo-new -p 8000:8000 node-todo-new
+
